@@ -53,7 +53,7 @@ We will need to implement the CRUD(L) functions in a DAO class to facilitate dat
 
 3. Write a method called `initializeInstance` which will create an instance of your `XkcdDbHelper` class, call `getWritableDatabase` on the object and then store that all in the `SQLiteDatabase` object. This is all done if the `SQLiteDatabase` object is `null`
 
-   > In all methods which need to access the database member, call the `initializeInstance` method first.
+   > In all methods which need to access the database member, check to see if it null before accessing it.
 
 4. We now need an object to store our db results in as it will store things that aren't in the web api objects. Create a class called `XkcdDbInfo`
 
@@ -114,6 +114,8 @@ We will need to implement the CRUD(L) functions in a DAO class to facilitate dat
 28. Call `execSQL` with your query.
 
     > execSQL will execute an SQL query like rawSQL will, but will not return a result.
+    
+    > You can also use the delete method if so inclined.
 
 29. Test your methods by entering test data, reading it, updating it and then deleting it. There is no need to attach this to the GUI yet, just use the debugger or log for now.
 
