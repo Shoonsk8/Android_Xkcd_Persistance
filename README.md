@@ -93,7 +93,7 @@ We will need to implement the CRUD(L) functions in a DAO class to facilitate dat
 
     > For added peace of mind call `getCount` on your cursor and make sure it returns 1 before getting the data
 
-20. Write a method called `updateComic` which accepts a `XkcdDbInfo` object.
+20. Write a method called `updateComic` which accepts a `XkcdDbComic` object.
 
 21. First we want to write a where clause and check it. Create two String variables, one for the where clause and one for the whole query.
 
